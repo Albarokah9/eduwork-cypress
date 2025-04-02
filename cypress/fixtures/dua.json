@@ -1,10 +1,10 @@
 {
-    "data-valid":{
+    "validUser":{
     "username": "username",
     "password": "password"
     },
   
-    "data-invalid":{
+    "invalidUser":{
     "username": "invaliduser",
     "password": "ivalidpassword"
     }
