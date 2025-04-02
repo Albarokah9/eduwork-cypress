@@ -27,9 +27,6 @@ describe('Working with inputs', () => {
         
     });
 
-    it('Should check "Keep me signed id', () => {
-        cy.get('#user_remember_me').should('exist').check().should('be.checked')
-    });
 
     
     

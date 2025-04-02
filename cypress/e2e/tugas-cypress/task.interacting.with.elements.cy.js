@@ -26,5 +26,9 @@ describe('Working with inputs', () => {
         // cy.get('input[name="user_password"]').clear().type('password').should('have.value', 'password') 
         
     });
+
+    it('Should check "Keep me signed id', () => {
+        cy.get('#user_remember_me').should('exist').check().should('be.checked')
+    });
     
 });
