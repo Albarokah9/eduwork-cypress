@@ -1,4 +1,4 @@
-describe('Login dan Logout Automation dengan Fixtures', () => {
+describe('Automation Login dengan kredensial invalid dan valid menggunakan fixtures dan Logout', () => {
 
     beforeEach(() => {
         // Mengunjungi halaman login sebelum setiap tes
