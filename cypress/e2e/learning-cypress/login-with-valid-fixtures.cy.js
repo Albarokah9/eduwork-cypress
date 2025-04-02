@@ -3,7 +3,7 @@ describe('Login dengan fixtures data', () => {
         cy.visit('http://zero.webappsecurity.com/login.html')
 
             // Mengambil data dari fixture file user.json
-        cy.fixture("valid").then(valid=> {
+        cy.fixture("valid").then(valid => {
             const username = valid.username
             const password = valid.password
 
