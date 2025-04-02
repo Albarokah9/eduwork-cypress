@@ -3,9 +3,9 @@ describe('Login dengan fixtures data', () => {
         cy.visit('http://zero.webappsecurity.com/login.html')
 
             // Mengambil data dari fixture file invalid.data.json
-        cy.fixture("invalid").then(data=> {
-            const username = data.username
-            const password = data.password
+        cy.fixture("invalid").then(invalid=> {
+            const username = invalid.username
+            const password = invalid.password
 
             // Mengisi form login
             cy.get('#user_login').type(username)
