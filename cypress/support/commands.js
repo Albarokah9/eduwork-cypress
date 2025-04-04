@@ -54,15 +54,15 @@ Cypress.Commands.add("Payment",()  => {
       cy.get("#sp_account").select(data.account)
       cy.get("#sp_amount").type(data.amount)
 
-      cy.get("#sp_date").type(data.date)
+    //   cy.get("#sp_date").type(data.date)
 
-        // ini script untuk memastikan apa bisa di pilih manual
-    //   let date = data.date.split("-")[2];
-    //   date = date.replace("0", "")
-    //   cy.get("#sp_date").click()
-    //   cy.get("#ui-datepicker-div").contains(date).click()
-    
-      cy.get("#sp_description").focus()
+    // ini script untuk memastikan apa bisa di pilih manual
+      let date = data.date.split("-")[2];
+      date = date.replace("0", "")
+      cy.get("#sp_date").click()
+      cy.get("#ui-datepicker-div").contains(date).click()
+
+    //   cy.get("#sp_description").focus()
       cy.get("#sp_description").type(data.description)
       cy.get("#pay_saved_payees").click();
       cy.get("#alert_content")

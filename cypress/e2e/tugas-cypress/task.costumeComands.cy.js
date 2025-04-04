@@ -27,6 +27,6 @@ describe('Login dengan fixtures data', () => {
     it('Payment method using fixtures data and costume commands', () => {
         // Menggunakan fixtures data dan costume commands
         cy.Payment()
-        
+        cy.get("#alert_content").should('contain.text','The payment was successfully submitted.')
     });
 })
