@@ -1,3 +1,4 @@
+
 describe('Login dengan fixtures data', () => {
     it('Should try to login', () => {
         cy.visit('http://zero.webappsecurity.com/login.html')
@@ -8,10 +9,13 @@ describe('Login dengan fixtures data', () => {
             const username = valid.username
             const password = valid.password
 
-            // Mengisi form login
-            cy.get('#user_login').type(username)
-            cy.get('#user_password').type(password)
-            cy.contains('Sign in').click()
+            // Menggunakan Costume Commands
+           cy.login(username, password)
+
+        //    Seharusnya, karna sudah menggunakan costume commands
+        //    cy.get('#user_login').type(username)
+        //    cy.get('#user_password').type(password)
+        //    cy.contains('Sign in').click()
 
             // Assertion: Memastikan login berhasil
             cy.url().should('not.include','login.html')
